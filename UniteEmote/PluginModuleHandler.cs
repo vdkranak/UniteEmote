@@ -84,7 +84,7 @@ namespace UniteEmote
 
         public override Dispatcher CurrentUiDispatcher { get ; set; }
 
-        private readonly List<FrameworkElement> views = new List<FrameworkElement>();
+        public readonly List<FrameworkElement> views = new List<FrameworkElement>();
         private string _htmlUrlOrContent;
 
         private void AddQuickAccessIconToViews()
