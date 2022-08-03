@@ -40,7 +40,7 @@
       <HintPath>..\packages\Appccelerate.Fundamentals.2.8.0\lib\portable-windows8+net45\Appccelerate.Fundamentals.dll</HintPath>
     </Reference>
     <Reference Include="Intel.Unite.Common">
-      <HintPath>..\..\..\..\Desktop\SDK\external\Intel.Unite.Common\Intel.Unite.Common.dll</HintPath>
+      <HintPath>..\external\Intel.Unite.Common\Intel.Unite.Common.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
