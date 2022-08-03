@@ -1,5 +1,4 @@
-﻿using FluentAssertions;
-using System;
+﻿using UnitePlugin;
 using Xunit;
 
 namespace UniteEmoteTest
@@ -10,17 +9,16 @@ namespace UniteEmoteTest
         public void TestMethod1()
         {
             // Given
-            var test = true;
-
+            var sut = new PluginModuleHandler();
 
 
             // When
-
+            sut.Load();
 
 
 
             // Then
-            test.Should().BeTrue();
+            
         }
     }
 }
