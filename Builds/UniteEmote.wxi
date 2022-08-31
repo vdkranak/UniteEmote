@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Include>
   <?define productVersion="1.0.0"?>
-  <?define productName="UnitePlugin"?>
+  <?define productName="UniteEmote"?>
   <?define productId="06553064-76f4-48b1-ae57-f66d264634ea"?>
   <?define productManufacturer="Intel Corporation"?>
 </Include>

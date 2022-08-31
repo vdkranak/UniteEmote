@@ -19,13 +19,13 @@ namespace UnitePlugin.ClientUI
         public static async Task<string> ReadHtmlContentAsync()
         {
             var sitecss = await
-                GetFileContentAsStringAsync("UnitePlugin.ClientUI.Source.css.site.min.css");
+                GetFileContentAsStringAsync("UniteEmote.ClientUI.Source.css.site.min.css");
 
             var ControlJS = await
-                GetFileContentAsStringAsync("UnitePlugin.ClientUI.Source.js.Control.main.js");
+                GetFileContentAsStringAsync("UniteEmote.ClientUI.Source.js.Control.main.js");
 
             var html = await
-                GetFileContentAsStringAsync("UnitePlugin.ClientUI.Source.HtmlContent.html");
+                GetFileContentAsStringAsync("UniteEmote.ClientUI.Source.HtmlContent.html");
 
             return html.Replace("{sitecss}", sitecss).Replace("{ControlJS}", ControlJS);
         }

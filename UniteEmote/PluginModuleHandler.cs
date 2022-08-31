@@ -35,7 +35,7 @@ namespace UnitePlugin
         }
 
         private const string _guid = "06553064-76f4-48b1-ae57-f66d264634ea";
-        private const string _name = "UnitePlugin";
+        private const string _name = "UniteEmote";
         private const string _description = "UnitePlugin";
         private const string _copyright = "Intel Corporation 2022";
         private const string _vendor = "Intel Corporation";
