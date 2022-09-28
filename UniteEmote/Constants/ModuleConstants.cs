@@ -12,7 +12,7 @@ namespace UniteEmote.Constants
         private const string _description = "TECHC Unite Plugin";
         private const string _copyright = "TECHC 2022";
         private const string _vendor = "TECHC";
-        private const string _version = "1.0.0.1010";
+        private const string _version = "1.0.0.1012";
         private const string _minimumUniteVersion = "4.0.0.0";
         private const string _entryPoint = "UniteEmote.dll";
 
