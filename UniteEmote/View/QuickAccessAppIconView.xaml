@@ -1,20 +1,21 @@
-﻿<UserControl x:Class="UniteEmote.View.QuickAccessAppIconView"
+﻿<UserControl x:Class="UnitePlugin.View.QuickAccessAppIconView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:UniteEmote.View"
-             xmlns:ViewModel="clr-namespace:UniteEmote.ViewModel"
+             xmlns:local="clr-namespace:UnitePlugin.View"
+             xmlns:ViewModel="clr-namespace:UnitePlugin.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>
-        <ViewModel:HubViewModel />
+        <ViewModel:QuickAccessIconViewModel />
     </UserControl.DataContext>
     <Grid>
         <StackPanel Background="#FF423E4F">
-            <Button x:Name="QuickAccessButton">
+            <Button x:Name="QuickAccessButton" Command="{Binding ShowButton}">
                 <Image x:Name="QuickAccessIconImage"
-        Source="/UnitePlugin;component/Images/menu-icon.png"/>
+                    Source="/UniteEmote;component/Images/menu-icon.png"
+             />
             </Button>
         </StackPanel>
     </Grid>

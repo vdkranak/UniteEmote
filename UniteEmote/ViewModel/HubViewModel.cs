@@ -7,21 +7,21 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Intel.Unite.Common.Display.Hub;
 
-namespace UniteEmote.ViewModel
+namespace UnitePlugin.ViewModel
 {
     [Serializable]
-    class HubViewModel
+    public class HubViewModel
     {
         [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        public void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         public HubAllocationInfo HubAllocationInfo { get; set; }
-        public Guid ControlIdenfier { get; private set; }
-        public bool IsAllocated { get; private set; }
+        public Guid ControlIdentifier { get; set; }
+        public bool IsAllocated { get; set; }
 
         public HubViewModel()
         {
@@ -32,7 +32,7 @@ namespace UniteEmote.ViewModel
         {
             if (hubAllocationResult.Success)
             {
-                ControlIdenfier = hubAllocationResult.AllocatedView.Id;
+                ControlIdentifier = hubAllocationResult.AllocatedView.Id;
                 IsAllocated = true;
             }
             else
