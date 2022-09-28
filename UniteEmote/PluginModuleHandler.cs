@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Threading;
-using Intel.Unite.Common;`
+using Intel.Unite.Common;
 using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Context;
 using Intel.Unite.Common.Core;
