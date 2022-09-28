@@ -7,7 +7,7 @@ namespace UniteEmote.ClientUI
 {
     class ClientUISetup
     {
-        public static string getHtml()
+        public static string GetHtml()
         {
             var task = ReadHtmlContentAsync();
             task.Wait();
