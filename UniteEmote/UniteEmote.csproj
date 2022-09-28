@@ -229,4 +229,7 @@
 
 </PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>del /S /Q "$(SolutionDir)Builds\*"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
