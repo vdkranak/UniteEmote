@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Threading;
-using Intel.Unite.Common;
+using Intel.Unite.Common;`
 using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Context;
 using Intel.Unite.Common.Core;
@@ -52,7 +52,7 @@ namespace UniteEmote
         public override ModuleInfo ModuleInfo => _moduleInfo;
 
         private const string _minimumUniteVersion = "4.0.0.0";
-        private const string _entryPoint = "UnitePlugin.dll";
+        private const string _entryPoint = "UniteEmote.dll";
         private static readonly ManifestOsSet _files = new ManifestOsSet
         {
             Windows = new Collection<ManifestFile>
