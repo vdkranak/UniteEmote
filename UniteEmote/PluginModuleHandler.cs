@@ -81,8 +81,15 @@ namespace UniteEmote
 
         public override void Load()
         {
-            AddQuickAccessIconToViews();
-            AllocatedQuickAccessIconViewsToHub();
+            try
+            {
+                AddQuickAccessIconToViews();
+                AllocatedQuickAccessIconViewsToHub();
+            }
+            catch (Exception e)
+            {
+                RuntimeContext.LogManager.LogException(ModuleInfo.Id, this.GetType().Name + "." + MethodBase.GetCurrentMethod()?.Name, "AddQuickAccessIconToViews AllocatedQuickAccessIconViewsToHub Failed", e);
+            }
         }
 
         private void AllocatedQuickAccessIconViewsToHub()
