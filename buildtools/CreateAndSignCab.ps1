@@ -109,8 +109,6 @@ Function SignCab{
         [string]$CabPath      = $(throw "-CabPath is required")
     )
     $signtoolPath = $(Resolve-Path  "C:\Program Files (x86)\Windows Kits\10\bin\*\x64\signtool.exe" | select-object -index 0).Path
-    #& $signtoolPath sign /v /f "$PFXPath" /t http://timestamp.verisign.com/scripts/timstamp.dll /p $Password "$CabPath"
-    #& $signtoolPath sign /v /f "$PFXPath" /t http://timestamp.globalsign.com/scripts/timstamp.dll /p $Password "$CabPath"
     & $signtoolPath sign /v /f "$PFXPath" /t http://timestamp.digicert.com /p $Password "$CabPath"
 }
 

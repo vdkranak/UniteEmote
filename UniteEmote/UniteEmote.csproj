@@ -72,7 +72,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Release powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File "$(SolutionDir)\BuildTools\CreateAndSignCab.ps1" -SolutionDir "$(ProjectDir).." -SolutionName "$(SolutionName)" -TargetPath "$(TargetPath)" -ManifestGeneratorDir "$(SolutionDir)\BuildTools\ManifestGenerator"
+
+if $(ConfigurationName) == ToTest powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File "$(SolutionDir)\BuildTools\CreateAndSignCab.ps1" -SolutionDir "$(ProjectDir).." -SolutionName "$(SolutionName)" -TargetPath "$(TargetPath)" -ManifestGeneratorDir "$(SolutionDir)\BuildTools\ManifestGenerator"
+</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -52,7 +52,7 @@ namespace UniteEmote
         public override ModuleInfo ModuleInfo => _moduleInfo;
 
         private const string _minimumUniteVersion = "4.0.0.0";
-        private const string _entryPoint = "UnitePlugin.dll";
+        private const string _entryPoint = "UniteEmote.dll";
         private static readonly ManifestOsSet _files = new ManifestOsSet
         {
             Windows = new Collection<ManifestFile>
@@ -85,7 +85,7 @@ namespace UniteEmote
         public override Dispatcher CurrentUiDispatcher { get ; set; }
 
         public readonly List<FrameworkElement> views = new List<FrameworkElement>();
-        private string _htmlUrlOrContent;
+        private readonly string _htmlUrlOrContent = "error";
 
         private void AddQuickAccessIconToViews()
         {
