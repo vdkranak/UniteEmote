@@ -7,13 +7,12 @@ namespace UniteEmote.Constants
 {
     public static class ModuleConstants
     {
-        private const string _guid = "a9bbad72-eeb3-47cc-b147-345cc48738cf";
-        private const string _name = "Unite Plugin Example";
-        private const string _description = "Unite Plugin Example";
-        private const string _copyright = "Intel Corporation 2019";
-        private const string _vendor = "Intel Corporation";
-        private const string _version = "4.1.0.0007";
-
+        private const string _guid = "6ae3df01-b01d-464b-9b4f-20e335fc8b50";
+        private const string _name = "Unite Emote";
+        private const string _description = "TECHC Unite Plugin";
+        private const string _copyright = "TECHC 2022";
+        private const string _vendor = "TECHC";
+        private const string _version = "1.0.0.0002";
         private const string _minimumUniteVersion = "4.0.0.0";
         private const string _entryPoint = "UniteEmote.dll";
 
@@ -38,6 +37,18 @@ namespace UniteEmote.Constants
                     SourcePath = "Appccelerate.Fundamentals.dll",
                     TargetPath = "Appccelerate.Fundamentals.dll",
                 },
+#if DEBUG
+                new ManifestFile()
+                {
+                    SourcePath = "Appccelerate.EventBroker.pdb",
+                    TargetPath = "Appccelerate.EventBroker.pdb",
+                },
+                new ManifestFile()
+                {
+                    SourcePath = "Appccelerate.Fundamentals.pdb",
+                    TargetPath = "Appccelerate.Fundamentals.pdb",
+                },
+#endif
             }
         };
 
