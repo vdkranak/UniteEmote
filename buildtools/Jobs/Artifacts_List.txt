@@ -1,3 +1,0 @@
-n,Builds\UnitePlugin.cab
-n,UnitePlugin\bin\x64\Release\UnitePlugin.dll
-n,UnitePluginTest\bin\x64\Release\UnitePluginTest.dll

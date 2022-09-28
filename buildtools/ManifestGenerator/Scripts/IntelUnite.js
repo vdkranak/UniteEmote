@@ -92,11 +92,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetContext, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -111,11 +106,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetTheme, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -130,11 +120,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetMaxMessageSize, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -148,11 +133,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetAppointmentList, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -166,11 +146,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetCurrentAppointments, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -184,11 +159,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at IsCalendarAvailable, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -203,11 +173,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at CreateFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -221,11 +186,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at WriteToFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -239,11 +199,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at CloseFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -258,11 +213,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at OpenFolder, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -276,11 +226,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at DeleteFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -295,11 +240,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetFileTransferConfiguration, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -313,11 +253,6 @@ if (OSName === 'Mac') {
             }
             catch (exception) {
                 console.log(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Webkit error at GetMaxFileSize, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -367,11 +302,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetContext, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -386,11 +316,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetTheme, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -405,11 +330,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetMaxMessageSize, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -423,11 +343,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetAppointmentList, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -441,11 +356,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetCurrentAppointments, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -459,11 +369,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at IsCalendarAvailable, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -478,11 +383,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at CreateFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -496,11 +396,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at WriteToFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -514,11 +409,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at CloseFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -533,11 +423,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at OpenFolder, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -551,11 +436,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at DeleteFile, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -570,11 +450,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetFileTransferConfiguration, " + exception, 4);
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -589,11 +464,6 @@ if (OSName === 'Windows') {
             }
             catch (exception) {
                 alert(exception);
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at GetMaxFileSize, " + exception, 4)
-                } catch (ex){
-
-                }
             }
         });
         return promise;
@@ -784,6 +654,7 @@ if (OSName === 'Chrome' || OSName === 'Linux') {
             console.log('Ignore message: empty')
             return
         }
+
         switch (data.event) {
             case 'promise':
                 if (window.promises[data.promiseId] && data.result) {
@@ -818,10 +689,11 @@ if (OSName === 'Chrome' || OSName === 'Linux') {
                 break;
         }
     })
-
+    
 }
 
 if (OSName === 'Android') {
+    
 
     //Outbound events
     window.IntelUnite.prototype.logMessage = function (message, severity) {
@@ -909,11 +781,6 @@ if (OSName === 'Android') {
                         break;
                 }
             } catch (exception) {
-                try {
-                    IntelUnite.logMessage("On IntelUnite.js, Error at HandleAndroidMessage, " + exception, 4);
-                } catch (ex){
-
-                }
                 alert(exception)
                 reject(exception);
             }
@@ -959,6 +826,7 @@ if (OSName === 'Android') {
     //Disable notifications and errors
     window.Notification = function () { };
     window.alert = function () { };
+    
 }
 
 
