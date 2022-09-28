@@ -2,7 +2,6 @@
 using System.Windows.Input;
 using Appccelerate.EventBroker;
 using Appccelerate.EventBroker.Handlers;
-using UnitePlugin.ViewModel;
 using UnitePlugin.Model.Command;
 using UnitePlugin.Model.EventArguments;
 using UnitePlugin.Static;

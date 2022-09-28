@@ -1,5 +1,4 @@
 ﻿using System;
-using UnitePlugin.ViewModel;
 
 namespace UnitePlugin.ViewModel
 {

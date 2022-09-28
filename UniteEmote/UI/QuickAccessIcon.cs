@@ -12,7 +12,6 @@ using UnitePlugin.ViewModel;
 using UnitePlugin.Constants;
 using UnitePlugin.Model.EventArguments;
 using UnitePlugin.View;
-using UnitePlugin.ViewModel;
 
 namespace UnitePlugin.UI
 {

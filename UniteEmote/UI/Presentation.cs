@@ -9,8 +9,6 @@ using System.Windows.Threading;
 using UnitePlugin.ViewModel;
 using UnitePlugin.Model.EventArguments;
 using UnitePlugin.View;
-using UnitePlugin.ViewModel;
-using UnitePlugin.ViewModel.Controls;
 
 namespace UnitePlugin.UI
 {

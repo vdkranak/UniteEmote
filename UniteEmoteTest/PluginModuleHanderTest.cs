@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoFixture;
-using AutoFixture.AutoMoq;
-using FluentAssertions;
-using UniteEmote;
-using Xunit;
-
-namespace UniteEmoteTest
+﻿namespace UniteEmoteTest
 {
     public class PluginModuleHandlerTest
     {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,7 +10,6 @@ using Intel.Unite.Common.Module.Common;
 using UnitePlugin.ViewModel;
 using UnitePlugin.Static;
 using UnitePlugin.Utility;
-using UnitePlugin.ViewModel;
 
 namespace UnitePlugin.UI
 {

@@ -1,8 +1,4 @@
-﻿using FluentAssertions;
-using Xunit;
-
-
-namespace UniteEmoteTest
+﻿namespace UniteEmoteTest
 {
     public class UnitTest1
     {

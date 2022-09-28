@@ -10,7 +10,6 @@ using System.Collections.ObjectModel;
 using UnitePlugin.Interfaces;
 using UnitePlugin.UI;
 using UnitePlugin.Model.EventArguments;
-using UnitePlugin.Static;
 
 namespace UnitePlugin.Utility
 {

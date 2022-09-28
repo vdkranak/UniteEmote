@@ -3,7 +3,6 @@ using Appccelerate.EventBroker.Handlers;
 using Intel.Unite.Common.Display;
 using System;
 using System.Windows.Input;
-using UnitePlugin.ViewModel;
 using UnitePlugin.Model.EventArguments;
 using UnitePlugin.Static;
 using UnitePlugin.Utility;
