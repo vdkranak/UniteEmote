@@ -44,14 +44,14 @@ namespace UniteEmote
 
         public override Dispatcher CurrentUiDispatcher { get ; set; }
 
-        public readonly List<FrameworkElement> views = new List<FrameworkElement>();
+        public readonly List<FrameworkElement> Views = new List<FrameworkElement>();
         private readonly string _htmlUrlOrContent = "error";
 
         private void AddQuickAccessIconToViews()
         {
             CurrentUiDispatcher.Invoke(delegate
             {
-                RuntimeContext.DisplayManager.AvailableDisplays.ToList().ForEach(d => views.Add(GetNewQuickAccessIconView(d)));
+                RuntimeContext.DisplayManager.AvailableDisplays.ToList().ForEach(d => Views.Add(GetNewQuickAccessIconView(d)));
             });
         }
 
@@ -80,7 +80,7 @@ namespace UniteEmote
 
         private void AllocatedQuickAccessIconViewsToHub()
         {
-            List<FrameworkElement> quickAccessIconViews = views.Where(view => (view.DataContext as HubViewModel).HubAllocationInfo.ViewType == 
+            List<FrameworkElement> quickAccessIconViews = Views.Where(view => (view.DataContext as HubViewModel).HubAllocationInfo.ViewType == 
             HubDisplayViewType.QuickAccessAppIconView).ToList();
             quickAccessIconViews.ForEach(view => AllocateView(view));
 
