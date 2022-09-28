@@ -18,7 +18,7 @@ namespace UniteEmote.UI
         public AuthImage(IHubModuleRuntimeContext runtimeContext, PhysicalDisplay display, Dispatcher currentUiDispatcher, Func<FrameworkElement, MarshalNativeHandleContract> createContract, EventHandler<HubViewEventArgs> eventCommandInvoker)
             : base(runtimeContext, display, currentUiDispatcher, createContract)
         {
-            Image = UniteImageHelper.GetUniteImageFromResource("/UnitePlugin;component/Images/bluetooth-icon.png", UniteImageType.Png);
+            Image = UniteImageHelper.GetUniteImageFromResource("/UniteEmote;component/Images/bluetooth-icon.png", UniteImageType.Png);
         }
     }
 }
