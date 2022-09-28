@@ -88,10 +88,16 @@ namespace UniteEmote
 
         private void AllocatedQuickAccessIconViewsToHub()
         {
-            List<FrameworkElement> quickAccessIconViews = Views.Where(view => (view.DataContext as HubViewModel).HubAllocationInfo.ViewType == 
-            HubDisplayViewType.QuickAccessAppIconView).ToList();
-            quickAccessIconViews.ForEach(view => AllocateView(view));
+            CurrentUiDispatcher.Invoke(delegate
+            {
 
+                List<FrameworkElement> quickAccessIconViews = Views.Where(
+                        view => (view.DataContext as HubViewModel).HubAllocationInfo.ViewType ==
+                                HubDisplayViewType.QuickAccessAppIconView).ToList()
+                    ;
+
+                quickAccessIconViews.ForEach(view => AllocateView(view));
+            });
         }
 
         private void AllocateView(FrameworkElement view)
