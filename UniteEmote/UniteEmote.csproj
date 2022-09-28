@@ -33,6 +33,12 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Appccelerate.EventBroker, Version=4.0.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appccelerate.EventBroker.4.0.0\lib\netstandard2.0\Appccelerate.EventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="Appccelerate.Fundamentals, Version=2.8.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appccelerate.Fundamentals.2.8.0\lib\portable-windows8+net45\Appccelerate.Fundamentals.dll</HintPath>
+    </Reference>
     <Reference Include="Intel.Unite.Common">
       <HintPath>..\external\Intel.Unite.Common\Intel.Unite.Common.dll</HintPath>
     </Reference>
@@ -42,6 +48,7 @@
     <Reference Include="System.AddIn" />
     <Reference Include="System.AddIn.Contract" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,29 +59,175 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientUI\ClientUISetup.cs" />
+    <Compile Include="Constants\ModuleConstants.cs" />
+    <Compile Include="Interfaces\IHubView.cs" />
+    <Compile Include="Interfaces\IHubViewManager.cs" />
+    <Compile Include="Interfaces\IMessenger.cs" />
+    <Compile Include="Model\Command\BaseCommand.cs" />
+    <Compile Include="Model\Command\CommandWraper.cs" />
+    <Compile Include="Model\EventArguments\EventArgumentTypes.cs" />
+    <Compile Include="Model\EventArguments\HubViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ShowAuthViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ShowPartialBackgroundViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ShowPresentationViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ShowRibbonViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ShowStatusImageEventArgs.cs" />
+    <Compile Include="Model\EventArguments\StatusViewInternalEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ToggleAuthViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\TogglePartialBackgroundViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\TogglePresentationViewEventArgs.cs" />
+    <Compile Include="Model\EventArguments\ToggleStatusViewEventArgs.cs" />
     <Compile Include="PluginModuleHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sensors\MockSensor.cs" />
+    <Compile Include="Sensors\MockSensorHandler.cs" />
+    <Compile Include="Sensors\PluginSensorManager.cs" />
+    <Compile Include="Sensors\SensorConfig.cs" />
+    <Compile Include="Static\MessagingEventBroker.cs" />
+    <Compile Include="Static\UnitePluginConfig.cs" />
+    <Compile Include="UI\AuthImage.cs" />
+    <Compile Include="UI\Background.cs" />
+    <Compile Include="UI\Factory\AuthImageFactory.cs" />
+    <Compile Include="UI\Factory\BackgroundFactory.cs" />
+    <Compile Include="UI\Factory\HubViewFactory.cs" />
+    <Compile Include="UI\Factory\PartialBackgroundFactory.cs" />
+    <Compile Include="UI\Factory\PresentationFactory.cs" />
+    <Compile Include="UI\Factory\QuickAccessAppFactory.cs" />
+    <Compile Include="UI\Factory\QuickAccessIconFactory.cs" />
+    <Compile Include="UI\Factory\StatusImageFactory.cs" />
+    <Compile Include="UI\HubView.cs" />
+    <Compile Include="UI\HubViewBase.cs" />
+    <Compile Include="UI\ImageViewBase.cs" />
+    <Compile Include="UI\PartialBackground.cs" />
+    <Compile Include="UI\Presentation.cs" />
+    <Compile Include="UI\QuickAccessApp.cs" />
+    <Compile Include="UI\QuickAccessIcon.cs" />
+    <Compile Include="UI\StatusImage.cs" />
+    <Compile Include="UI\ViewBase.cs" />
+    <Compile Include="Utility\BoolToStringConverter.cs" />
+    <Compile Include="Utility\ConvertMessage.cs" />
+    <Compile Include="Utility\CryptoStrongRandom.cs" />
+    <Compile Include="Utility\DeepCopy.cs" />
+    <Compile Include="Utility\HubViewManager.cs" />
+    <Compile Include="Utility\Messenger.cs" />
+    <Compile Include="Utility\RelayCommand.cs" />
+    <Compile Include="Utility\UniteImageHelper.cs" />
+    <Compile Include="ViewModel\BackgroundViewModel.cs" />
+    <Compile Include="ViewModel\Controls\AuthViewContolViewModel.cs" />
+    <Compile Include="ViewModel\Controls\PartialBackgroundControlViewModel.cs" />
+    <Compile Include="ViewModel\Controls\PresentationControlViewModel.cs" />
+    <Compile Include="ViewModel\Controls\RibbonViewContolViewModel.cs" />
+    <Compile Include="ViewModel\Controls\StatusViewControlViewModel.cs" />
+    <Compile Include="ViewModel\Factory\GenericFactory.cs" />
     <Compile Include="ViewModel\HubViewModel.cs" />
+    <Compile Include="ViewModel\PartialBackgroundViewModel.cs" />
+    <Compile Include="ViewModel\PresentationViewModel.cs" />
+    <Compile Include="ViewModel\QuickAccessAppViewModel.cs" />
+    <Compile Include="ViewModel\QuickAccessIconViewModel.cs" />
+    <Compile Include="View\BackgroundView.xaml.cs">
+      <DependentUpon>BackgroundView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AllControlsView.xaml.cs">
+      <DependentUpon>AllControlsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\AuthViewControlView.xaml.cs">
+      <DependentUpon>AuthViewControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\PartialBackgroundControlView.xaml.cs">
+      <DependentUpon>PartialBackgroundControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\PresentationControlView.xaml.cs">
+      <DependentUpon>PresentationControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\RibbonViewControlView.xaml.cs">
+      <DependentUpon>RibbonViewControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\StatusViewControlView.xaml.cs">
+      <DependentUpon>StatusViewControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PartialBackgroundView.xaml.cs">
+      <DependentUpon>PartialBackgroundView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PresentationView.xaml.cs">
+      <DependentUpon>PresentationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\QuickAccessAppIconView.xaml.cs">
       <DependentUpon>QuickAccessAppIconView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\QuickAccessAppView.xaml.cs">
+      <DependentUpon>QuickAccessAppView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuickAccessIconView.xaml.cs">
+      <DependentUpon>QuickAccessIconView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\BackgroundView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\AllControlsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\AuthViewControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\PartialBackgroundControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\PresentationControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\RibbonViewControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Controls\StatusViewControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PartialBackgroundView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PresentationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\QuickAccessAppIconView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\QuickAccessAppView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\QuickAccessIconView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\menu-icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Images\menu-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientUI\Source\css\site.min.css" />
+    <Content Include="ClientUI\Source\HtmlContent.html" />
+    <Content Include="ClientUI\Source\js\Control.main.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File "$(SolutionDir)\BuildTools\CreateAndSignCab.ps1" -SolutionDir "$(ProjectDir).." -SolutionName "$(SolutionName)" -TargetPath "$(TargetPath)" -ManifestGeneratorDir "$(SolutionDir)\BuildTools\ManifestGenerator"
-
-if $(ConfigurationName) == ToTest powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File "$(SolutionDir)\BuildTools\CreateAndSignCab.ps1" -SolutionDir "$(ProjectDir).." -SolutionName "$(SolutionName)" -TargetPath "$(TargetPath)" -ManifestGeneratorDir "$(SolutionDir)\BuildTools\ManifestGenerator"
-</PostBuildEvent>
+    <PostBuildEvent>
+        if $(ConfigurationName) == Release powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File "$(SolutionDir)\BuildTools\CreateAndSignCab.ps1" -SolutionDir "$(ProjectDir).." -SolutionName "$(SolutionName)" -TargetPath "$(TargetPath)" -ManifestGeneratorDir "$(SolutionDir)\BuildTools\ManifestGenerator"
+        if $(ConfigurationName) == ToTest powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File "$(SolutionDir)\BuildTools\CreateAndSignCab.ps1" -SolutionDir "$(ProjectDir).." -SolutionName "$(SolutionName)" -TargetPath "$(TargetPath)" -ManifestGeneratorDir "$(SolutionDir)\BuildTools\ManifestGenerator"
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

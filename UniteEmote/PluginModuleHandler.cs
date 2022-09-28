@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Threading;
-using Intel.Unite.Common;
 using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Context;
 using Intel.Unite.Common.Core;
@@ -10,13 +9,17 @@ using Intel.Unite.Common.Manifest;
 using Intel.Unite.Common.Module.Common;
 using Intel.Unite.Common.Module.Feature.Hub;
 using System.Windows;
-using UniteEmote.ViewModel;
+using UnitePlugin.ViewModel;
 using System.Linq;
 using Intel.Unite.Common.Display.Hub;
 using Intel.Unite.Common.Display;
-using UniteEmote.View;
+using UnitePlugin.View;
+using UnitePlugin.ClientUI;
+using UnitePlugin.UI;
+using UnitePlugin.Static;
+using UnitePlugin.Model.EventArguments;
 
-namespace UniteEmote
+namespace UnitePlugin
 {
 
     public class PluginModuleHandler : HubFeatureModuleBase
@@ -28,12 +31,12 @@ namespace UniteEmote
 
         public PluginModuleHandler(IModuleRuntimeContext runtimeContext) : base(runtimeContext)
         {
-            
+            ConfigureModuleForClient();
         }
 
         private const string _guid = "06553064-76f4-48b1-ae57-f66d264634ea";
         private const string _name = "UniteEmote";
-        private const string _description = "UniteEmote";
+        private const string _description = "UnitePlugin";
         private const string _copyright = "Intel Corporation 2022";
         private const string _vendor = "Intel Corporation";
         private const string _version = "1.0.0";
@@ -84,8 +87,8 @@ namespace UniteEmote
 
         public override Dispatcher CurrentUiDispatcher { get ; set; }
 
-        private readonly List<FrameworkElement> views = new List<FrameworkElement>();
-        private string _htmlUrlOrContent;
+        public readonly List<FrameworkElement> views = new List<FrameworkElement>();
+        private readonly string _htmlUrlOrContent = "error";
 
         private void AddQuickAccessIconToViews()
         {
@@ -142,7 +145,13 @@ namespace UniteEmote
 
         public override void IncomingMessage(Message message)
         {
-            
+            if(message.TargetModuleId == ModuleInfo.Id)
+            {
+                if (typeof(EventArgumentTypes).IsEnumDefined(message.DataType))
+                {
+                    MessagingEventBroker.Process(message);
+                }
+            }
         }
 
         public override void SessionKeyChanged(KeyValuePair sessionKey)
@@ -188,6 +197,18 @@ namespace UniteEmote
         public override void Unload()
         {
             
+        }
+
+
+
+        private string _html = @"<!DOCTYPE html><html><head><title>Error</title><script type='text/javascript'>window.onload=function(){alert();}</script></head>
+                                <body onclick='alert()'><div>If you're reading this, something went wrong.</div></body></html>";
+
+        private void ConfigureModuleForClient()
+        {
+            FeatureModuleType = FeatureModuleType.Html;
+            ModuleImage = UniteImageHelper.GetUniteImageFromResource("/UnitePlugin;component/Images/menu-icon.png", UniteImageType.Png);
+            _html = ClientUISetup.getHtml();
         }
     }
 }
