@@ -12,7 +12,7 @@ namespace UniteEmote.Constants
         private const string _description = "TECHC Unite Plugin";
         private const string _copyright = "TECHC 2022";
         private const string _vendor = "TECHC";
-        private const string _version = "1.0.0.0002";
+        private const string _version = "1.0.0.1003";
         private const string _minimumUniteVersion = "4.0.0.0";
         private const string _entryPoint = "UniteEmote.dll";
 
@@ -40,8 +40,8 @@ namespace UniteEmote.Constants
 #if DEBUG
                 new ManifestFile()
                 {
-                    SourcePath = "Appccelerate.EventBroker.pdb",
-                    TargetPath = "Appccelerate.EventBroker.pdb",
+                    SourcePath = "UniteEmote.pdb",
+                    TargetPath = "UniteEmote.pdb",
                 },
                 new ManifestFile()
                 {
