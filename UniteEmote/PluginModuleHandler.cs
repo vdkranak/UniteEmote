@@ -88,7 +88,7 @@ namespace UnitePlugin
         public override Dispatcher CurrentUiDispatcher { get ; set; }
 
         public readonly List<FrameworkElement> views = new List<FrameworkElement>();
-        private string _htmlUrlOrContent;
+        private readonly string _htmlUrlOrContent = "error";
 
         private void AddQuickAccessIconToViews()
         {
