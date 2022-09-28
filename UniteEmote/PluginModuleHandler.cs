@@ -164,7 +164,7 @@ namespace UniteEmote
         private void ConfigureModuleForClient()
         {
             FeatureModuleType = FeatureModuleType.Html;
-            ModuleImage = UniteImageHelper.GetUniteImageFromResource("/UnitePlugin;component/Images/menu-icon.png", UniteImageType.Png);
+            ModuleImage = UniteImageHelper.GetUniteImageFromResource("/UniteEmote;component/Images/menu-icon.png", UniteImageType.Png);
             _html = ClientUISetup.getHtml();
         }
     }
