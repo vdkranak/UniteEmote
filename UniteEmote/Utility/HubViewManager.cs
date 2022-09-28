@@ -112,7 +112,7 @@ namespace UniteEmote.Utility
             lock (this)
             {
                 result = _hubViews.FirstOrDefault(hubView =>
-                    hubView.GetType() == Type.GetType("UnitePlugin.UI." + Enum.GetName(typeof(UI.HubView.Type), type)) &&
+                    hubView.GetType() == Type.GetType("UniteEmote.UI." + Enum.GetName(typeof(UI.HubView.Type), type)) &&
                     hubView.HubAllocationInfo.PhysicalDisplay == display
                 );
             }
@@ -125,7 +125,7 @@ namespace UniteEmote.Utility
             List<IHubView> result;
             lock (this)
             {
-                result = _hubViews.Where(hubView => hubView.GetType() == Type.GetType("UnitePlugin.UI." + Enum.GetName(typeof(UI.HubView.Type), type))).ToList();
+                result = _hubViews.Where(hubView => hubView.GetType() == Type.GetType("UniteEmote.UI." + Enum.GetName(typeof(UI.HubView.Type), type))).ToList();
             }
             return result;
         }

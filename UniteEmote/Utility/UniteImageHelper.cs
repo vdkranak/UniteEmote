@@ -53,7 +53,7 @@ namespace UniteEmote.Utility
         /// <returns cref="UniteImage"></returns>
         /// <example>
         ///   <code>
-        ///     var Image = GetUniteImageFromEmbeddedResource("UnitePlugin.Images.recording-icon.png", UniteImageType.Png); 
+        ///     var Image = GetUniteImageFromEmbeddedResource("UniteEmote.Images.recording-icon.png", UniteImageType.Png); 
         ///   </code>
         /// </example>
         protected UniteImage GetUniteImageFromEmbeddedResource(string resourcePath, UniteImageType uniteImageType)

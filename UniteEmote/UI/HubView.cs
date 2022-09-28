@@ -33,7 +33,7 @@ namespace UniteEmote.UI
 
             foreach (Type hubViewType in Enum.GetValues(typeof(Type)))
             {
-                var factory = (HubViewFactory)Activator.CreateInstance(System.Type.GetType("UnitePlugin.UI.Factory." + Enum.GetName(typeof(Type), hubViewType) + "Factory") ?? throw new InvalidOperationException());
+                var factory = (HubViewFactory)Activator.CreateInstance(System.Type.GetType("UniteEmote.UI.Factory." + Enum.GetName(typeof(Type), hubViewType) + "Factory") ?? throw new InvalidOperationException());
                 _factories.Add(hubViewType, factory);
             }
         }
