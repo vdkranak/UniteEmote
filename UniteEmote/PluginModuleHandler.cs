@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Threading;
 using Intel.Unite.Common.Command;
@@ -33,7 +34,14 @@ namespace UniteEmote
 
         public PluginModuleHandler(IModuleRuntimeContext runtimeContext) : base(runtimeContext)
         {
-            ConfigureModuleForClient();
+            try
+            {
+                ConfigureModuleForClient();
+            }
+            catch (Exception e)
+            {
+                RuntimeContext.LogManager.LogException(ModuleInfo.Id, this.GetType().Name + "." + MethodBase.GetCurrentMethod()?.Name, "ConfigureModuleForClient Failed", e);
+            }
         }
         
         public override ModuleInfo ModuleInfo => ModuleConstants.ModuleInfo;
