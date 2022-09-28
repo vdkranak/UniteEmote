@@ -30,7 +30,7 @@ namespace UniteEmote.ViewModel.Controls
         }
         public bool IsAllocated { get; set; }
 
-        public bool IsAllViewAllocated => UnitePluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.Presentation);
+        public bool IsAllViewAllocated => PluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.Presentation);
 
         public string ButtonText => HubViewMethodBoolToStringConverter.Convert(!IsAllocated) + " Presentation";
 
@@ -42,7 +42,7 @@ namespace UniteEmote.ViewModel.Controls
                            x =>
                            {
                                ShowPresentationViewButton_SendMsgAndClick(this, new TogglePresentationViewEventArgs { SourceGuid = x.ControlIdentifier });
-                           }, x => UnitePluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
+                           }, x => PluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
             }
         }
 
@@ -51,7 +51,7 @@ namespace UniteEmote.ViewModel.Controls
         public PresentationControlViewModel()
         {
             MessagingEventBroker.GlobalEventBroker.Register(this);
-            _showPresentationView += UnitePluginConfig.HubViewManager.EventCommandInvoker;
+            _showPresentationView += PluginConfig.HubViewManager.EventCommandInvoker;
             CommandManager.InvalidateRequerySuggested();
         }
 
@@ -60,7 +60,7 @@ namespace UniteEmote.ViewModel.Controls
 
         public void ShowPresentationViewButton_SendMsgAndClick(object sender, TogglePresentationViewEventArgs eventArgs)
         {
-            UnitePluginConfig.RuntimeContext.MessageSender.TrySendMessage(
+            PluginConfig.RuntimeContext.MessageSender.TrySendMessage(
                 new CommandWraper<TogglePresentationViewEventArgs>(eventArgs).ToMessage());
         }
 

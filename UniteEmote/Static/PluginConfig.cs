@@ -9,7 +9,7 @@ using UniteEmote.Sensors;
 
 namespace UniteEmote.Static
 {
-    public static class UnitePluginConfig
+    public static class PluginConfig
     {
         /// <summary>
         /// Static instance of the current UI Dispatcher

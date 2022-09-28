@@ -27,7 +27,7 @@ namespace UniteEmote.ViewModel.Controls
 
         public bool IsAllocated { get; set; }
 
-        public bool IsAllViewAllocated => UnitePluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.StatusImage);
+        public bool IsAllViewAllocated => PluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.StatusImage);
 
         public string ButtonText => HubViewMethodBoolToStringConverter.Convert(!IsAllocated) + " StatusImage";
 
@@ -39,7 +39,7 @@ namespace UniteEmote.ViewModel.Controls
                            x =>
                            {
                                ShowStatusImageButton_SendMsgAndClick(this, new ToggleStatusViewEventArgs { SourceGuid = x.ControlIdentifier });
-                           }, x => UnitePluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
+                           }, x => PluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
             }
         }
 
@@ -48,7 +48,7 @@ namespace UniteEmote.ViewModel.Controls
         public StatusViewControlViewModel()
         {
             MessagingEventBroker.GlobalEventBroker.Register(this);
-            _showStatusImage += UnitePluginConfig.HubViewManager.EventCommandInvoker;
+            _showStatusImage += PluginConfig.HubViewManager.EventCommandInvoker;
             CommandManager.InvalidateRequerySuggested();
         }
 
@@ -57,7 +57,7 @@ namespace UniteEmote.ViewModel.Controls
  
         public void ShowStatusImageButton_SendMsgAndClick(object sender, ToggleStatusViewEventArgs eventArgs)
         {
-            UnitePluginConfig.RuntimeContext.MessageSender.TrySendMessage(new CommandWraper<ToggleStatusViewEventArgs>(eventArgs).ToMessage());
+            PluginConfig.RuntimeContext.MessageSender.TrySendMessage(new CommandWraper<ToggleStatusViewEventArgs>(eventArgs).ToMessage());
         }
 
         [EventSubscription("topic://" + "ToggleStatusViewEventArgs", typeof(OnUserInterface))]

@@ -29,14 +29,14 @@ namespace UniteEmote.Sensors
         /// <param name="args"></param>
         public void UpdateSensorData(object sender, SensorArgs args)
         {
-            UnitePluginConfig.RuntimeContext.LogManager.LogMessage(Constants.ModuleConstants.ModuleInfo.Id, LogLevel.Trace, this.GetType().Name , MethodBase.GetCurrentMethod().ToString());
+            PluginConfig.RuntimeContext.LogManager.LogMessage(Constants.ModuleConstants.ModuleInfo.Id, LogLevel.Trace, this.GetType().Name , MethodBase.GetCurrentMethod().ToString());
             try
             {
                 SensorManager.Set(args.Sensor);
             }
             catch (Exception e)
             {
-                UnitePluginConfig.RuntimeContext.LogManager.LogException(Constants.ModuleConstants.ModuleInfo.Id, MethodBase.GetCurrentMethod().ToString(), "error setting sensor" ,e);
+                PluginConfig.RuntimeContext.LogManager.LogException(Constants.ModuleConstants.ModuleInfo.Id, MethodBase.GetCurrentMethod().ToString(), "error setting sensor" ,e);
             }
             
         }

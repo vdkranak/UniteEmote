@@ -16,17 +16,17 @@ public static class SensorConfig
 
     private static void SetupLocalSensorUpdates()
     {
-        MockSensor.UpdateSensorData += UnitePluginConfig.PluginSensorManager.UpdateSensorData;
+        MockSensor.UpdateSensorData += PluginConfig.PluginSensorManager.UpdateSensorData;
     }
 
     private static void SetupCoreUpdates()
     {
-        UnitePluginConfig.RuntimeContext.SensorManager.SensorAdded += new MockSensorHandler().ProcessData;
+        PluginConfig.RuntimeContext.SensorManager.SensorAdded += new MockSensorHandler().ProcessData;
     }
 
     private static void SetupPluginSensorManager()
     {
-        UnitePluginConfig.PluginSensorManager = new PluginSensorManager(UnitePluginConfig.RuntimeContext.SensorManager);
+        PluginConfig.PluginSensorManager = new PluginSensorManager(PluginConfig.RuntimeContext.SensorManager);
     }
 }
 }

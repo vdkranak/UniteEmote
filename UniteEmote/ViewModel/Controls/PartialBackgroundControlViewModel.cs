@@ -30,7 +30,7 @@ namespace UniteEmote.ViewModel.Controls
 
         public bool IsAllocated { get; set; }
 
-        public bool IsAllViewAllocated => UnitePluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.PartialBackground);
+        public bool IsAllViewAllocated => PluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.PartialBackground);
 
         public string ButtonText => HubViewMethodBoolToStringConverter.Convert(!IsAllocated) + " PartialBackground";
 
@@ -42,7 +42,7 @@ namespace UniteEmote.ViewModel.Controls
                            x =>
                            {
                                ShowPartialBackgroundViewButton_SendMsgAndClick(this, new TogglePartialBackgroundViewEventArgs { SourceGuid = x.ControlIdentifier });
-                           }, x => UnitePluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
+                           }, x => PluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
             }
         }
         #endregion
@@ -50,7 +50,7 @@ namespace UniteEmote.ViewModel.Controls
         public PartialBackgroundControlViewModel()
         {
             MessagingEventBroker.GlobalEventBroker.Register(this);
-            _showPartialBackgroundView += UnitePluginConfig.HubViewManager.EventCommandInvoker;
+            _showPartialBackgroundView += PluginConfig.HubViewManager.EventCommandInvoker;
             CommandManager.InvalidateRequerySuggested();
         }
 
@@ -59,7 +59,7 @@ namespace UniteEmote.ViewModel.Controls
 
         public void ShowPartialBackgroundViewButton_SendMsgAndClick(object sender, TogglePartialBackgroundViewEventArgs eventArgs)
         {
-            UnitePluginConfig.RuntimeContext.MessageSender.TrySendMessage(
+            PluginConfig.RuntimeContext.MessageSender.TrySendMessage(
                 new CommandWraper<TogglePartialBackgroundViewEventArgs>(eventArgs).ToMessage());
         }
 

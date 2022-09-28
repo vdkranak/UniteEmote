@@ -55,7 +55,7 @@ namespace UniteEmote.ViewModel.Controls
         public RibbonViewControlViewModel()
         {
             MessagingEventBroker.GlobalEventBroker.Register(this);
-            _showRibbonView += UnitePluginConfig.HubViewManager.EventCommandInvoker;
+            _showRibbonView += PluginConfig.HubViewManager.EventCommandInvoker;
             CommandManager.InvalidateRequerySuggested();
         }
 
@@ -64,7 +64,7 @@ namespace UniteEmote.ViewModel.Controls
 
         public void ShowRibbonViewButton_SendMsgAndClick(object sender, ShowRibbonViewEventArgs eventArgs)
         {
-            UnitePluginConfig.RuntimeContext.MessageSender.TrySendMessage(
+            PluginConfig.RuntimeContext.MessageSender.TrySendMessage(
                 new CommandWraper<ShowRibbonViewEventArgs>(eventArgs).ToMessage());
             ShowRibbonViewButton_Click(sender, eventArgs);
         }

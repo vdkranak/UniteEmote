@@ -22,7 +22,7 @@ public class MockSensorHandler : MarshalByRefObjectBase
     {
         if (e.Sensor.UniqueName != MockSensor.UniqueName) return;
         var temp = e.Sensor.KeyValueProperties.FirstOrDefault(x => x.Key == "Value")?.Value;
-        UnitePluginConfig.RuntimeContext.DisplayManager.TryShowToastMessage($"Toast Message Mock Sensor Temp: {temp}", VisibilityTime);
+        PluginConfig.RuntimeContext.DisplayManager.TryShowToastMessage($"Toast Message Mock Sensor Temp: {temp}", VisibilityTime);
     }
 }
 }

@@ -85,7 +85,7 @@
     <Compile Include="Sensors\PluginSensorManager.cs" />
     <Compile Include="Sensors\SensorConfig.cs" />
     <Compile Include="Static\MessagingEventBroker.cs" />
-    <Compile Include="Static\UnitePluginConfig.cs" />
+    <Compile Include="Static\PluginConfig.cs" />
     <Compile Include="UI\AuthImage.cs" />
     <Compile Include="UI\Background.cs" />
     <Compile Include="UI\Factory\AuthImageFactory.cs" />

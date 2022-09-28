@@ -51,7 +51,7 @@ namespace UniteEmote.Sensors
         /// </summary>
         public static void SendUpdate()
         {
-            UnitePluginConfig.RuntimeContext.LogManager.LogMessage(Constants.ModuleConstants.ModuleInfo.Id, LogLevel.Trace, "MockSensor", MethodBase.GetCurrentMethod().ToString());
+            PluginConfig.RuntimeContext.LogManager.LogMessage(Constants.ModuleConstants.ModuleInfo.Id, LogLevel.Trace, "MockSensor", MethodBase.GetCurrentMethod().ToString());
             _temp += _random.Next(_maxChange) - _random.Next(_maxChange);
             UpdateSensorData?.Invoke(null, new SensorArgs(GetTempSensor(_temp)));
         }

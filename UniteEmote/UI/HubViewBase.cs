@@ -41,10 +41,10 @@ namespace UniteEmote.UI
                     DisplayManagerEvent.Set();
                     return;
                 }
-                UnitePluginConfig.Contract = CreateContract(HubView); 
+                PluginConfig.Contract = CreateContract(HubView); 
                 
                 RuntimeContext.DisplayManager.AllocateUiInHubDisplayAsync(
-                        UnitePluginConfig.Contract,
+                        PluginConfig.Contract,
                         HubAllocationInfo,
                         AllocatedCallBack
                         );

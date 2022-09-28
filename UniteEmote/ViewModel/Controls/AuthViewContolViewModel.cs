@@ -29,7 +29,7 @@ namespace UniteEmote.ViewModel.Controls
         }
         public bool IsAllocated { get; set; }
 
-        public bool IsAllViewAllocated => UnitePluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.AuthImage);
+        public bool IsAllViewAllocated => PluginConfig.HubViewManager.IsAllViewsAllocated(UI.HubView.Type.AuthImage);
 
         public string ButtonText => HubViewMethodBoolToStringConverter.Convert(!IsAllocated) + " AuthImage";
 
@@ -41,7 +41,7 @@ namespace UniteEmote.ViewModel.Controls
                            x =>
                            {
                                ShowAuthViewButton_SendMsgAndClick(this, new ToggleAuthViewEventArgs { SourceGuid = x.ControlIdentifier });
-                           },x => UnitePluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
+                           },x => PluginConfig.HubViewManager.DoAllViewsHaveSameIsAllocated(UI.HubView.Type.AuthImage)));
             }
         }
         #endregion
@@ -49,7 +49,7 @@ namespace UniteEmote.ViewModel.Controls
         public AuthViewControlViewModel()
         {
             MessagingEventBroker.GlobalEventBroker.Register(this);
-            _showAuthView += UnitePluginConfig.HubViewManager.EventCommandInvoker;
+            _showAuthView += PluginConfig.HubViewManager.EventCommandInvoker;
             CommandManager.InvalidateRequerySuggested();
         }
 
@@ -63,7 +63,7 @@ namespace UniteEmote.ViewModel.Controls
 
         public void ShowAuthViewButton_SendMsgAndClick(object sender, ToggleAuthViewEventArgs eventArgs)
         {
-            UnitePluginConfig.RuntimeContext.MessageSender.TrySendMessage(
+            PluginConfig.RuntimeContext.MessageSender.TrySendMessage(
                 new CommandWraper<ToggleAuthViewEventArgs>(eventArgs).ToMessage());
         }
 
