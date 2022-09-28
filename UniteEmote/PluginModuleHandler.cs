@@ -49,7 +49,15 @@ namespace UniteEmote
 
         public override string HtmlUrlOrContent => _htmlUrlOrContent;
 
-        public override Dispatcher CurrentUiDispatcher { get ; set; }
+        public override Dispatcher CurrentUiDispatcher
+        {
+            get => PluginConfig.CurrentUiDispatcher;
+            set
+            {
+                if (PluginConfig.CurrentUiDispatcher == null)
+                    PluginConfig.CurrentUiDispatcher = value;
+            }
+        }
 
         public readonly List<FrameworkElement> Views = new List<FrameworkElement>();
         private readonly string _htmlUrlOrContent = "error";
@@ -81,6 +89,8 @@ namespace UniteEmote
 
         public override void Load()
         {
+            PluginConfig.RuntimeContext = RuntimeContext;
+
             try
             {
                 AddQuickAccessIconToViews();
