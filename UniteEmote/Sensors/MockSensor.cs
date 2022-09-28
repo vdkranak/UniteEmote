@@ -23,7 +23,7 @@ namespace UniteEmote.Sensors
         private static int _temp = 72;
 
         public static event EventHandler<SensorArgs> UpdateSensorData;
-        public static string UniqueName { get; } = "UnitePlugin_Temp_Probe_1";
+        public static string UniqueName { get; } = "Temp_Probe_1";
         public static int Interval => _interval;
 
         /// <summary>
