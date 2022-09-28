@@ -18,6 +18,8 @@ using UniteEmote.Static;
 using UniteEmote.Utility;
 using UniteEmote.View;
 using UniteEmote.ViewModel;
+using UniteEmote.Constants;
+
 
 namespace UniteEmote
 {
@@ -33,65 +35,10 @@ namespace UniteEmote
         {
             ConfigureModuleForClient();
         }
-
-        private const string _guid = "06553064-76f4-48b1-ae57-f66d264634ea";
-        private const string _name = "UniteEmote";
-        private const string _description = "UnitePlugin";
-        private const string _copyright = "Intel Corporation 2022";
-        private const string _vendor = "Intel Corporation";
-        private const string _version = "1.0.0";
-
-        private static readonly ModuleInfo _moduleInfo = new ModuleInfo
-        {
-            ModuleType = ModuleType.Feature,
-            Id = Guid.Parse(_guid),
-            Name = _name,
-            Description = _description,
-            Copyright = _copyright,
-            Vendor = _vendor,
-            Version = Version.Parse(_version),
-            SupportedPlatforms = ModuleSupportedPlatform.Mac | ModuleSupportedPlatform.Windows,
-        };
-        public override ModuleInfo ModuleInfo => _moduleInfo;
-
-        private const string _minimumUniteVersion = "4.0.0.0";
-        private const string _entryPoint = "UniteEmote.dll";
-        private static readonly ManifestOsSet _files = new ManifestOsSet
-        {
-            Windows = new Collection<ManifestFile>
-            {
-                new ManifestFile()
-                {
-                    SourcePath = _entryPoint,
-                    TargetPath = _entryPoint,
-                },
-                new ManifestFile()
-                {
-                    SourcePath = "Appccelerate.EventBroker.dll",
-                    TargetPath = "Appccelerate.EventBroker.dll",
-                },
-                new ManifestFile()
-                {
-                    SourcePath = "Appccelerate.Fundamentals.dll",
-                    TargetPath = "Appccelerate.Fundamentals.dll",
-                },
-            }
-        };
-        private static readonly ModuleManifest _moduleManifest = new ModuleManifest
-        {
-            Owner = UniteModuleOwner.Hub,
-            ModuleId = _moduleInfo.Id,
-            Name = new MultiLanguageString(_moduleInfo.Name),
-            Description = new MultiLanguageString(_moduleInfo.Description),
-            ModuleVersion = _moduleInfo.Version,
-            MinimumUniteVersion = Version.Parse(_minimumUniteVersion),
-            Settings = new Collection<ConfigurationSetting>(),
-            Files = _files,
-            Installers = new Collection<ManifestInstaller>(),
-            EntryPoint = _entryPoint,
-            ModuleType = _moduleInfo.ModuleType,
-        };
-        public override ModuleManifest ModuleManifest => _moduleManifest;
+        
+        public override ModuleInfo ModuleInfo => ModuleConstants.ModuleInfo;
+        
+        public override ModuleManifest ModuleManifest => ModuleConstants.ModuleManifest;
 
         public override string HtmlUrlOrContent => _htmlUrlOrContent;
 
