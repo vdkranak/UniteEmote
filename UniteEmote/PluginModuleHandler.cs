@@ -47,7 +47,7 @@ namespace UniteEmote
         
         public override ModuleManifest ModuleManifest => ModuleConstants.ModuleManifest;
 
-        public override string HtmlUrlOrContent => _htmlUrlOrContent;
+        public override string HtmlUrlOrContent => _html;
 
         public override Dispatcher CurrentUiDispatcher
         {
@@ -60,7 +60,6 @@ namespace UniteEmote
         }
 
         public readonly List<FrameworkElement> Views = new List<FrameworkElement>();
-        private readonly string _htmlUrlOrContent = "error";
 
         private void AddQuickAccessIconToViews()
         {
@@ -195,7 +194,7 @@ namespace UniteEmote
         {
             FeatureModuleType = FeatureModuleType.Html;
             ModuleImage = UniteImageHelper.GetUniteImageFromResource("/UniteEmote;component/Images/menu-icon.png", UniteImageType.Png);
-            _html = ClientUISetup.getHtml();
+            _html = ClientUISetup.GetHtml();
         }
     }
 }
