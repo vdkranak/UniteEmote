@@ -4,10 +4,10 @@ using System.Reflection;
 using System.Timers;
 using Intel.Unite.Common.Logging;
 using Intel.Unite.Common.Sensor;
-using UnitePlugin.Static;
-using UnitePlugin.Utility;
+using UniteEmote.Static;
+using UniteEmote.Utility;
 
-namespace UnitePlugin.Sensors
+namespace UniteEmote.Sensors
 {
     /// <summary>
     /// Generates random temperature data to demonstrate Sensor Data Within Unite

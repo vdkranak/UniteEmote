@@ -5,9 +5,10 @@ using Intel.Unite.Common.Context.Hub;
 using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Display.Hub;
 using Intel.Unite.Common.Module.Common;
-using UnitePlugin.Model.EventArguments;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.Utility;
 
-namespace UnitePlugin.UI
+namespace UniteEmote.UI
 {
     [Serializable]
     public class StatusImage : ImageViewBase

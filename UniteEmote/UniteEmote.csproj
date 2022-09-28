@@ -216,12 +216,12 @@
     <Resource Include="Images\menu-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ClientUI\Source\css\site.min.css" />
     <Content Include="ClientUI\Source\HtmlContent.html" />
     <Content Include="ClientUI\Source\js\Control.main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

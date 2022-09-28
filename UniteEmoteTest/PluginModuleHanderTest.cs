@@ -1,4 +1,9 @@
-﻿namespace UniteEmoteTest
+﻿using AutoFixture;
+using AutoFixture.AutoMoq;
+using UniteEmote;
+using Xunit;
+
+namespace UniteEmoteTest
 {
     public class PluginModuleHandlerTest
     {

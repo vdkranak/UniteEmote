@@ -2,12 +2,12 @@
 using System.Windows.Input;
 using Appccelerate.EventBroker;
 using Appccelerate.EventBroker.Handlers;
-using UnitePlugin.Model.Command;
-using UnitePlugin.Model.EventArguments;
-using UnitePlugin.Static;
-using UnitePlugin.Utility;
+using UniteEmote.Model.Command;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.Static;
+using UniteEmote.Utility;
 
-namespace UnitePlugin.ViewModel.Controls
+namespace UniteEmote.ViewModel.Controls
 {
     [Serializable]
     public class PresentationControlViewModel : HubViewModel

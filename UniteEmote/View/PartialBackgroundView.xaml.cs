@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace UnitePlugin.View
+namespace UniteEmote.View
 {
     /// <summary>
     /// Interaction logic for PartialBackgroundView.xaml

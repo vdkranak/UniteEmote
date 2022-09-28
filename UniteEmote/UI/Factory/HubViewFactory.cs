@@ -4,10 +4,10 @@ using System.Windows.Threading;
 using Intel.Unite.Common.Context.Hub;
 using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Module.Common;
-using UnitePlugin.Interfaces;
-using UnitePlugin.Model.EventArguments;
+using UniteEmote.Interfaces;
+using UniteEmote.Model.EventArguments;
 
-namespace UnitePlugin.UI.Factory
+namespace UniteEmote.UI.Factory
 {
     public abstract class HubViewFactory
     {

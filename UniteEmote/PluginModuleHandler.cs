@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
 using System.Windows.Threading;
 using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Context;
 using Intel.Unite.Common.Core;
+using Intel.Unite.Common.Display;
+using Intel.Unite.Common.Display.Hub;
 using Intel.Unite.Common.Manifest;
 using Intel.Unite.Common.Module.Common;
 using Intel.Unite.Common.Module.Feature.Hub;
-using System.Windows;
-using UnitePlugin.ViewModel;
-using System.Linq;
-using Intel.Unite.Common.Display.Hub;
-using Intel.Unite.Common.Display;
-using UnitePlugin.View;
-using UnitePlugin.ClientUI;
-using UnitePlugin.UI;
-using UnitePlugin.Static;
-using UnitePlugin.Model.EventArguments;
+using UniteEmote.ClientUI;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.Static;
+using UniteEmote.Utility;
+using UniteEmote.View;
+using UniteEmote.ViewModel;
 
-namespace UnitePlugin
+namespace UniteEmote
 {
 
     public class PluginModuleHandler : HubFeatureModuleBase
@@ -60,12 +60,22 @@ namespace UnitePlugin
         {
             Windows = new Collection<ManifestFile>
             {
-                 new ManifestFile()
+                new ManifestFile()
                 {
                     SourcePath = _entryPoint,
                     TargetPath = _entryPoint,
-                }
-                }
+                },
+                new ManifestFile()
+                {
+                    SourcePath = "Appccelerate.EventBroker.dll",
+                    TargetPath = "Appccelerate.EventBroker.dll",
+                },
+                new ManifestFile()
+                {
+                    SourcePath = "Appccelerate.Fundamentals.dll",
+                    TargetPath = "Appccelerate.Fundamentals.dll",
+                },
+            }
         };
         private static readonly ModuleManifest _moduleManifest = new ModuleManifest
         {

@@ -1,13 +1,13 @@
-﻿using Appccelerate.EventBroker;
+﻿using System;
+using System.Windows.Input;
+using Appccelerate.EventBroker;
 using Appccelerate.EventBroker.Handlers;
 using Intel.Unite.Common.Display;
-using System;
-using System.Windows.Input;
-using UnitePlugin.Model.EventArguments;
-using UnitePlugin.Static;
-using UnitePlugin.Utility;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.Static;
+using UniteEmote.Utility;
 
-namespace UnitePlugin.ViewModel
+namespace UniteEmote.ViewModel
 {
     [Serializable]
     public class QuickAccessIconViewModel : HubViewModel

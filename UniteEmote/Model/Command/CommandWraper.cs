@@ -1,7 +1,7 @@
 ﻿using Intel.Unite.Common.Command.Serialize;
-using UnitePlugin.Constants;
+using UniteEmote.Constants;
 
-namespace UnitePlugin.Model.Command
+namespace UniteEmote.Model.Command
 {
     public class CommandWraper<T> : BaseCommand<T>
     {

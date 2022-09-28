@@ -1,17 +1,17 @@
-﻿using Intel.Unite.Common.Context.Hub;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Threading;
+using Intel.Unite.Common.Context.Hub;
 using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Module.Common;
-using System;
-using System.Collections.Generic;
-using System.Windows;
-using System.Linq;
-using System.Windows.Threading;
-using System.Collections.ObjectModel;
-using UnitePlugin.Interfaces;
-using UnitePlugin.UI;
-using UnitePlugin.Model.EventArguments;
+using UniteEmote.Interfaces;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.UI;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     [Serializable]
     public class HubViewManager : IHubViewManager

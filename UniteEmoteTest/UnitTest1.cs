@@ -1,4 +1,7 @@
-﻿namespace UniteEmoteTest
+﻿using UniteEmote;
+using Xunit;
+
+namespace UniteEmoteTest
 {
     public class UnitTest1
     {

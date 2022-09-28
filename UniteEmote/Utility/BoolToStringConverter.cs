@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     [Serializable]
     public class BoolToStringConverter : IValueConverter

@@ -1,19 +1,19 @@
-﻿using Intel.Unite.Common.Context.Hub;
-using Intel.Unite.Common.Display;
-using Intel.Unite.Common.Display.Hub;
-using Intel.Unite.Common.Module.Common;
-using System;
+﻿using System;
 using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
-using UnitePlugin.ViewModel;
-using UnitePlugin.Constants;
-using UnitePlugin.Model.EventArguments;
-using UnitePlugin.View;
+using Intel.Unite.Common.Context.Hub;
+using Intel.Unite.Common.Display;
+using Intel.Unite.Common.Display.Hub;
+using Intel.Unite.Common.Module.Common;
+using UniteEmote.Constants;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.View;
+using UniteEmote.ViewModel;
 
-namespace UnitePlugin.UI
+namespace UniteEmote.UI
 {
     [Serializable]
     public class QuickAccessIcon : HubViewBase

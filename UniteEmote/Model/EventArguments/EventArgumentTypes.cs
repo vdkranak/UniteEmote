@@ -1,4 +1,4 @@
-﻿namespace UnitePlugin.Model.EventArguments
+﻿namespace UniteEmote.Model.EventArguments
 {
     /// <summary>
     /// ENUM that holds all Event types for subscription based messages

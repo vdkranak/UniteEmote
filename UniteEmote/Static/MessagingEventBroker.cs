@@ -1,11 +1,11 @@
-﻿using Appccelerate.EventBroker;
+﻿using System;
+using Appccelerate.EventBroker;
 using Intel.Unite.Common.Command;
-using System;
-using UnitePlugin.Interfaces;
-using UnitePlugin.Model.EventArguments;
-using UnitePlugin.Utility;
+using UniteEmote.Interfaces;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.Utility;
 
-namespace UnitePlugin.Static
+namespace UniteEmote.Static
 {
     public static class MessagingEventBroker
     {

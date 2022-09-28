@@ -6,10 +6,10 @@ using System.Windows.Threading;
 using Intel.Unite.Common.Context.Hub;
 using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Module.Common;
-using UnitePlugin.Model.EventArguments;
-using UnitePlugin.UI;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.UI;
 
-namespace UnitePlugin.Interfaces
+namespace UniteEmote.Interfaces
 {
     public interface IHubViewManager
     {

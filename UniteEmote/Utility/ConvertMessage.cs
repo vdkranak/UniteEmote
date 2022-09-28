@@ -1,7 +1,7 @@
 ﻿using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Command.Serialize;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     /// <summary>
     /// Helper class to convert generic event args

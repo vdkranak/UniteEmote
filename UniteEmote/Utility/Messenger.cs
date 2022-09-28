@@ -1,10 +1,10 @@
-﻿using Appccelerate.EventBroker;
+﻿using System;
+using Appccelerate.EventBroker;
 using Intel.Unite.Common.Command;
-using System;
-using UnitePlugin.Interfaces;
-using UnitePlugin.Static;
+using UniteEmote.Interfaces;
+using UniteEmote.Static;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     public class Messenger<T> : IMessenger
     {

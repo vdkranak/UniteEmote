@@ -1,4 +1,4 @@
-﻿namespace UnitePlugin.ViewModel.Factory
+﻿namespace UniteEmote.ViewModel.Factory
 {
     public static class SingletonViewModelFactory<T> where T : new()
     {

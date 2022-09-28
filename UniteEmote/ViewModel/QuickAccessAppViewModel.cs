@@ -1,6 +1,6 @@
 using System;
 
-namespace UnitePlugin.ViewModel
+namespace UniteEmote.ViewModel
 {
     [Serializable]
     public class QuickAccessAppViewModel : HubViewModel

@@ -1,9 +1,9 @@
 ﻿using System;
 using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Command.Serialize;
-using UnitePlugin.Model.EventArguments;
+using UniteEmote.Model.EventArguments;
 
-namespace UnitePlugin.Model.Command
+namespace UniteEmote.Model.Command
 {
     public class BaseCommand<T> : CommandBase
     {

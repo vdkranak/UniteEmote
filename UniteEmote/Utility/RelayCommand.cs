@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     [Serializable]
     public class RelayCommand<T> : ICommand

@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Windows;
 using Intel.Unite.Common.Display;
 
-namespace UnitePlugin.UI
+namespace UniteEmote.Utility
 {
     [Serializable]
     public class UniteImageHelper

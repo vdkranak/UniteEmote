@@ -1,6 +1,6 @@
 ﻿using Intel.Unite.Common.Command;
 
-namespace UnitePlugin.Interfaces
+namespace UniteEmote.Interfaces
 {
     public interface IMessenger
     {

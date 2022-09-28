@@ -1,15 +1,15 @@
-﻿using Intel.Unite.Common.Context.Hub;
-using Intel.Unite.Common.Display;
-using Intel.Unite.Common.Module.Common;
-using System;
+﻿using System;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Threading;
-using UnitePlugin.Constants;
-using UnitePlugin.Interfaces;
-using UnitePlugin.Model.EventArguments;
+using Intel.Unite.Common.Context.Hub;
+using Intel.Unite.Common.Display;
+using Intel.Unite.Common.Module.Common;
+using UniteEmote.Constants;
+using UniteEmote.Interfaces;
+using UniteEmote.Model.EventArguments;
 
-namespace UnitePlugin.UI.Factory
+namespace UniteEmote.UI.Factory
 {
     public class PartialBackgroundFactory : HubViewFactory
     {

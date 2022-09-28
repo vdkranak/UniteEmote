@@ -1,15 +1,15 @@
-﻿using Intel.Unite.Common.Context.Hub;
-using Intel.Unite.Common.Display;
-using Intel.Unite.Common.Display.Hub;
-using Intel.Unite.Common.Module.Common;
-using System;
+﻿using System;
 using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
-using UnitePlugin.Constants;
-using UnitePlugin.Interfaces;
+using Intel.Unite.Common.Context.Hub;
+using Intel.Unite.Common.Display;
+using Intel.Unite.Common.Display.Hub;
+using Intel.Unite.Common.Module.Common;
+using UniteEmote.Constants;
+using UniteEmote.Interfaces;
 
-namespace UnitePlugin.UI
+namespace UniteEmote.UI
 {
     [Serializable]
     public abstract class ViewBase : MarshalByRefObjectBase, IHubView

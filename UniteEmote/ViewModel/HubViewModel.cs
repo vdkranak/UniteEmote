@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Intel.Unite.Common.Display.Hub;
 
-namespace UnitePlugin.ViewModel
+namespace UniteEmote.ViewModel
 {
     [Serializable]
     public class HubViewModel

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnitePlugin.Model.EventArguments
+namespace UniteEmote.Model.EventArguments
 {
     public class ToggleStatusViewEventArgs : EventArgs
     {

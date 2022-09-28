@@ -7,11 +7,11 @@ using Intel.Unite.Common.Context.Hub;
 using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Display.Hub;
 using Intel.Unite.Common.Module.Common;
-using UnitePlugin.ViewModel;
-using UnitePlugin.Static;
-using UnitePlugin.Utility;
+using UniteEmote.Static;
+using UniteEmote.Utility;
+using UniteEmote.ViewModel;
 
-namespace UnitePlugin.UI
+namespace UniteEmote.UI
 {
     [Serializable]
     public abstract class HubViewBase : ViewBase

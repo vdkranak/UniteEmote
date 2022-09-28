@@ -1,13 +1,13 @@
-﻿using Intel.Unite.Common.Command;
+﻿using System.Windows.Threading;
+using Intel.Unite.Common.Command;
 using Intel.Unite.Common.Context.Hub;
 using Intel.Unite.Common.Module.Common;
-using System.Windows.Threading;
-using UnitePlugin.Constants;
-using UnitePlugin.Interfaces;
-using UnitePlugin.Model.EventArguments;
-using UnitePlugin.Sensors;
+using UniteEmote.Constants;
+using UniteEmote.Interfaces;
+using UniteEmote.Model.EventArguments;
+using UniteEmote.Sensors;
 
-namespace UnitePlugin.Static
+namespace UniteEmote.Static
 {
     public static class UnitePluginConfig
     {

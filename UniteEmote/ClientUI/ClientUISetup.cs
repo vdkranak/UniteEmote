@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace UnitePlugin.ClientUI
+namespace UniteEmote.ClientUI
 {
     class ClientUISetup
     {

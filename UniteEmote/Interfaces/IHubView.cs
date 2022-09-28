@@ -2,7 +2,7 @@
 using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Display.Hub;
 
-namespace UnitePlugin.Interfaces
+namespace UniteEmote.Interfaces
 {
     public interface IHubView
     {

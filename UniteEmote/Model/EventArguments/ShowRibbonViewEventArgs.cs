@@ -1,7 +1,7 @@
 ﻿using System;
-using UnitePlugin.ViewModel.Controls;
+using UniteEmote.ViewModel.Controls;
 
-namespace UnitePlugin.Model.EventArguments
+namespace UniteEmote.Model.EventArguments
 {
     ///Create in UnitePlugin.Model.EventArguments
     ///and add to enum EventArgumentTypes

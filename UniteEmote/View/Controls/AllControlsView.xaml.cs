@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace UnitePlugin.View.Controls
+namespace UniteEmote.View.Controls
 {
     /// <summary>
     /// Interaction logic for AllControlsView.xaml

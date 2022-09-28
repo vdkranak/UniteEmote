@@ -1,7 +1,7 @@
 ﻿using Intel.Unite.Common.Display;
 using Intel.Unite.Common.Display.Hub;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     public static class DeepCopy
     {

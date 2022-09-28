@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnitePlugin.Model.EventArguments
+namespace UniteEmote.Model.EventArguments
 {
     /// <summary>
     /// EventArg that is used when a plugin attempts to Allocate, Deallocate or Show a Unite View.

@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Intel.Unite.Common.Module.Common;
 using Intel.Unite.Common.Sensor;
-using UnitePlugin.Static;
+using UniteEmote.Static;
 
-namespace UnitePlugin.Sensors
+namespace UniteEmote.Sensors
 {
     /// <summary>
     /// Handles updates to sensor

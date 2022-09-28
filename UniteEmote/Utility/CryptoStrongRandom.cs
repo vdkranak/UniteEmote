@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace UnitePlugin.Utility
+namespace UniteEmote.Utility
 {
     public class CryptoStrongRandom
     {

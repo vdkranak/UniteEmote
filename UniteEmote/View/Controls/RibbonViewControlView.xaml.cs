@@ -1,8 +1,8 @@
 ﻿using System.Windows.Controls;
-using UnitePlugin.ViewModel.Controls;
-using UnitePlugin.ViewModel.Factory;
+using UniteEmote.ViewModel.Controls;
+using UniteEmote.ViewModel.Factory;
 
-namespace UnitePlugin.View.Controls
+namespace UniteEmote.View.Controls
 {
     /// <summary>
     /// Interaction logic for RibbonViewControlView.xaml

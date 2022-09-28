@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using Intel.Unite.Common.Manifest;
 using Intel.Unite.Common.Module.Common;
 
-namespace UnitePlugin.Constants
+namespace UniteEmote.Constants
 {
     public static class ModuleConstants
     {

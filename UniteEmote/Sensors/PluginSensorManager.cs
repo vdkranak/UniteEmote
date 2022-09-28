@@ -2,9 +2,9 @@
 using System.Reflection;
 using Intel.Unite.Common.Logging;
 using Intel.Unite.Common.Sensor;
-using UnitePlugin.Static;
+using UniteEmote.Static;
 
-namespace UnitePlugin.Sensors
+namespace UniteEmote.Sensors
 {
     /// <summary>
     /// Managers the sensor information from the plugin

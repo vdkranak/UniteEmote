@@ -1,6 +1,6 @@
-﻿using UnitePlugin.Static;
+﻿using UniteEmote.Static;
 
-namespace UnitePlugin.Sensors
+namespace UniteEmote.Sensors
 {
     /// <summary>
     /// Configures Sensors to send and receive data from Intel.Unite.Common 

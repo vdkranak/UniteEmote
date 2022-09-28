@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace UnitePlugin.View
+namespace UniteEmote.View
 {
     /// <summary>
     /// QuickAccessAppIconView.xaml の相互作用ロジック
