@@ -28,7 +28,7 @@ namespace UniteEmote.Static
         private static IMessenger GetMessenger(EventArgumentTypes eventArgumentTypes)
         {
             Type genericType = typeof(Messenger<>);
-            Type[] genericTypeArgs = { System.Type.GetType("UnitePlugin.Model.EventArguments." + eventArgumentTypes) };
+            Type[] genericTypeArgs = { System.Type.GetType("UniteEmote.Model.EventArguments." + eventArgumentTypes) };
             var argMessenger = genericType.MakeGenericType(genericTypeArgs);
             if (argMessenger == null) throw new Exception("Valid Messenger not created.");
 
